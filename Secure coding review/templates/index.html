@@ -1,0 +1,9 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+{% block content %}
+    <h1>Welcome to FlaskSecureApp</h1>
+    <p>Your secure Flask application with beautiful design.</p>
+    {% if 'username' not in session %}
+        <a href="{{ url_for('login') }}" class="btn">Get Started</a>
+    {% endif %}
+{% endblock %}
